@@ -1,0 +1,29 @@
+  <div class="row container">
+    <%= form_for @blog do |f| %>
+      <div class="row">
+        <div class="input-field col s4  ">
+          <%= f.text_field :title, placeholder: 'title', value: '', class: "materialize-textarea", id: "textarea1"%>
+          <%= label :title, :title %>
+        </div>
+        <div class="input-field col s10">
+          <%= f.text_area :text, placeholder: 'write here FREELY!', value: '', class: "materialize-textarea", id: "textarea2"%>
+          <%= label :text, :blog %>
+        </div>
+        <div class="input-field col s10">
+          <%= f.text_field :image, placeholder: 'past image url link', value: '', class: "materialize-textarea", id: "textarea3"%>
+          <%= label :image, :image %>
+        </div>
+        <div class="input-field col s10">
+          <%= f.number_field :size, value: '3',min: 2, max:12, class: "materialize-textarea", id: "textarea4"%>
+          <%= label :size, :"(2~12のお好きな数字を今日のあなたの気分で入力！)" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col10 push1">
+          <%= button_tag type: "submit", class: "btn btn--block" do %>
+            投稿する
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
